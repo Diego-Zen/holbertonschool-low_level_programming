@@ -13,7 +13,8 @@ This project is all about learning the basics of C programming language
 * betty-style
 
 ## Knowledge
-* Brian Kernighan as creator of C
+* Dennis Ritchie is the creator of C
+* Brian Kernighan Cbook
 * Linus Torvalds
 * C program compilation process
 * Hash-bang
