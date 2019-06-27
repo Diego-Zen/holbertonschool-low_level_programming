@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/**
- * fizz_buzz - prints the numbers from 1 to 100 changing multiples of 3 and 5
- *
- */
 void fizz_buzz(void);
 
 /**
@@ -16,6 +12,12 @@ int main(void)
 	fizz_buzz();
 	return (0);
 }
+
+/**
+ * fizz_buzz - prints the numbers from 1 to 100 changing multiples of 3 and 5
+ *
+ *
+ */
 
 void fizz_buzz(void)
 {
