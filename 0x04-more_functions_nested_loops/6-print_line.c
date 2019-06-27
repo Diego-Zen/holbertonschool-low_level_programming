@@ -3,7 +3,8 @@
  * print_line - draw a straight line
  *
  * Description: draw a line
- * @n: number of times
+ * @n: number
+ *
  */
 void print_line(int n)
 {
@@ -12,9 +13,9 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		for (i = 0; i <= n; i++)
+		for (i = 1; i <= n; i++)
 		{
-			_putchar('_');
+			_putchar(95);
 		}
 	}
 	_putchar('\n');
