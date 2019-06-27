@@ -37,21 +37,3 @@ void print_to_98(int n)
 	}
 
 }
-
-/**
- * test - Char
- * @n: integer
- * Return: integer
- */
-int test(int n)
-{
-
-	int x;
-	int y;
-
-	x = n / 10;
-	y = n % 10;
-	_putchar(x);
-	_putchar(y);
-	return (_putchar(x));
-}
