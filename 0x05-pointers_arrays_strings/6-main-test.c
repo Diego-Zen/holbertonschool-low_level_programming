@@ -9,7 +9,7 @@ int main(void)
 {
 	char *str;
 
-	str = "012345678910";
+	str = "0123456789123234234234";
 	puts2(str);
 	return (0);
 }
