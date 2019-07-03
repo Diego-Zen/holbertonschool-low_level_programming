@@ -2,28 +2,28 @@
 /**
  * rev_string - reverse a string
  *
- * @s: Pointer char
+ * @s: Pointer char String
  */
 void rev_string(char *s)
 {
-	int x = 0;
-	int i = 0;
-	int j = 0;
-	char ch[1000];
+	int i;
+	int length = sizeof(s);
+	char *start, *end, ch;
 
-	while (s[i] != '\0')
+	start = s;
+	end = s;
+
+	for (i = 0; i < length; i++)
 	{
-		i++;
-		if (s[i] == '\0')
-		{
-			j = i - 1;
-			while (j >= 0)
-			{
-				ch[x] = s[j];
-				j--;
-				x++;
-				_putchar(ch[x]);
-			}
-		}
+		end++;
+	}
+	for (i = 0; i < length / 2; i++)
+	{
+		ch = *end;
+		*end = *start;
+		*start = ch;
+
+		start++;
+		end--;
 	}
 }
