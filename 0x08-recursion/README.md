@@ -1,18 +1,18 @@
-# C - Even more pointers, arrays and strings
+# C - Recursion
 
 ## Description
-This project is about arrays, pointers, strings in C
+This project is about recursion in C
 
 ## General
-* What are pointers and how to use them
-* What are multidimensional arrays and how to use them
-* What are the most common C standard library
+* What is a recursion
+* How to implement recursion and in which cases
 
 ## Knowledge
 * Data structures
 * Arrays
 * Pointers
 * Strings
+* Recursion
 
 ## Maintainer | School
 @Diego-Zen - @Holberton School
