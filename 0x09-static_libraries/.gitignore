@@ -2,7 +2,7 @@
 *~
 
 #ignore c files
-.c
+*.c
 
 #ignore compiled files
-.o
+*.o
