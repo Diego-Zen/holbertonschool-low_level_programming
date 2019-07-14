@@ -1,0 +1,8 @@
+#ignore mac autosave
+*~
+
+#ignore c files
+.c
+
+#ignore compiled files
+.o
