@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * main - multiplies two numbers
+ * main - multiply
  *
  * @argc: integer count arguments
  * @argv: string vector arguments
@@ -11,11 +11,11 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	unsigned int i, sum = 0;
 
 	if (argc > 2)
 	{
-		for (i = 1; i < argc; i++)
+		for (i = 1; i < (unsigned int)argc; i++)
 		{
 			if (atoi(argv[i]) > 0)
 				sum = sum + atoi(argv[i]);
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%d\n", argc - 1);
+		printf("%d\n", sum);
 		return (0);
 	}
 
