@@ -6,9 +6,10 @@
  * @argc: integer count arguments
  * @argv: string vector arguments
  *
+ * Return: Success
  */
 int main(int argc, char *argv[])
 {
-        printf("%s\n", argv[argc - 1]);
+	printf("%s\n", argv[argc - 1]);
 	return (0);
 }
