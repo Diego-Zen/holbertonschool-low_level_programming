@@ -7,35 +7,50 @@
  * @s1: string
  * @s2: string
  *
- * Return: Success
+ * Return: pointer or null
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	int i;
-	int size;
+	int i, j;
+	int size1, size2;
 	char *s;
 
-	if (str == NULL)
+	size1 = size(s1);
+	size2 = size(s2) + 1;
+
+	s = malloc((size1 * sizeof(char)) + (size2 * sizeof(char)));
+	if (s == '\0')
 	{
 		return ('\0');
 	}
 	else
 	{
-		for (size = 0; str[size] != '\0'; size++)
-			;
-		s = malloc(size * sizeof(char));
-		if (s == '\0')
+		for (i = 0; i < size1; i++)
 		{
-			return ('\0');
+			s[i] = s1[i];
 		}
-		else
+		for (j = 0; j < size2; j++)
 		{
-			for (i = 0; i < size; i++)
-			{
-				s[i] = str[i];
-			}
-			return (s);
+			s[i] = s2[j];
+			i++;
 		}
-		free(s);
+		return (s);
 	}
+	free(s);
+}
+
+/**
+ * size - Return the size of a string
+ *
+ * @str: string
+ *
+ * Return: integer size of string
+ */
+int size(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
 }
