@@ -2,37 +2,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *create_array - creates an array of chars
+ * *_strdup - returns a pointer containing a copy
  *
- * @size: integer size
- * @c: char
+ * @str: string
  *
  * Return: Success
  */
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	unsigned int i;
+	int i;
+	int size;
+	char *s;
 
-	if (size == 0)
+	if (str == NULL)
 	{
 		return ('\0');
 	}
 	else
 	{
-		char *ch;
+		for (size = 0; str[size] != '\0'; size++)
+			;
 
-		ch = malloc(size * sizeof(char));
-		if (ch == NULL)
+		s = malloc(size * sizeof(char));
+		for (i = 0; i < size; i++)
 		{
-			return ('\0');
+			s[i] = str[i];
 		}
-		else
-		{
-			for (i = 0; i < size; i++)
-			{
-				ch[i] = c;
-			}
-			return (ch);
-		}
+		return (s);
 	}
 }
