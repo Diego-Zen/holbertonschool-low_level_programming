@@ -2,15 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *_strdup - returns a pointer containing a copy
+ * *str_concat - concatenates two strings
  *
- * @str: string
+ * @s1: string
+ * @s2: string
  *
  * Return: Success
  */
 char *_strdup(char *str)
 {
-	int i, size;
+	int i;
+	int size;
 	char *s;
 
 	if (str == NULL)
@@ -19,7 +21,7 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		for (size = 1; str[size - 1] != '\0'; size++)
+		for (size = 0; str[size] != '\0'; size++)
 			;
 		s = malloc(size * sizeof(char));
 		if (s == '\0')
