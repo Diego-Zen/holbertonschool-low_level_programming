@@ -1,24 +1,23 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * **alloc_grid - pointer to a 2 dimensional array of integers
+ * *argstostr - concatenates all the arguments
  *
- * @width: integer
- * @height: integer
+ * @ac: Integer count
+ * @av: Array char
  *
  * Return: pointer or null
  */
-int **alloc_grid(int width, int height)
+char *argstostr(int ac, char **av)
 {
-	int i, j;
-	int **s;
+	char *s;
 
-	if (width <= 0 || height <= 0)
+	if (ac == 0 || av == NULL)
 	{
 		return ('\0');
 	}
 
-	s = malloc(height * sizeof(*s));
+	s = malloc(ac * sizeof(char));
 
 	if (s == NULL)
 	{
@@ -26,22 +25,6 @@ int **alloc_grid(int width, int height)
 	}
 	else
 	{
-		for (i = 0; i < height; i++)
-		{
-			s[i] = malloc(width * sizeof(int));
-			if (s[i] == NULL)
-			{
-				return ('\0');
-			}
-			else
-			{
-				for (j = 0; j < width; j++)
-				{
-					s[i][j] = 0;
-				}
-			}
-		}
 		return (s);
 	}
-	free(s);
 }
