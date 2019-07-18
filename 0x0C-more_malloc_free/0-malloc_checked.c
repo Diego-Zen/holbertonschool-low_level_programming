@@ -2,37 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *create_array - creates an array of chars
+ * *malloc_checked - allocates memory
  *
- * @size: integer size
- * @c: char
+ * @b: unisigned int
  *
- * Return: Success
+ * Return: pointer or null
  */
-char *create_array(unsigned int size, char c)
+void *malloc_checked(unsigned int b)
 {
-	unsigned int i;
+	void *ptr;
 
-	if (size == 0)
+	ptr = malloc(b);
+	if (ptr == NULL)
 	{
-		return ('\0');
+		exit(98);
 	}
 	else
 	{
-		char *ch;
-
-		ch = malloc(size * sizeof(char));
-		if (ch == NULL)
-		{
-			return ('\0');
-		}
-		else
-		{
-			for (i = 0; i < size; i++)
-			{
-				ch[i] = c;
-			}
-			return (ch);
-		}
+		return (ptr);
 	}
 }
