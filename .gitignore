@@ -1,2 +1,4 @@
 # Ignore emacs autosave files ~
 *~
+# Ignore compiled files
+*.[oa]
