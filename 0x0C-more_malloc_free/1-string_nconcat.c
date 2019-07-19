@@ -11,53 +11,50 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ch;
-	int i, j, size;
+	char *str;
+	unsigned int i, j, size1, size2;
 
 	if (s1 == NULL)
-		s1 = '';
+		s1 = "";
 	if (s2 == NULL)
-		s2 = '';
+		s2 = "";
 
-	size = 0;
-	if (n >= sizeof(s2))
+	size1 = size(s1);
+	size2 = size(s2);
+
+	if (n >= size2)
+		n = size2;
+
+	str = malloc(sizeof(char) * size1 + n + 1);
+	if (str == NULL)
 	{
-		ch = malloc(n * sizeof(s1) + sizeof(s2) - 1);
-		if (ch == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			for (i = 0; s[i] != '\0'; i++)
-				ch[i] = s1[i];
-			for (j = 0; s[j] != '\0'; j++)
-			{
-				ch[i] = s2[j];
-				i++;
-			}
-			return (ch);
-		}
+		return (NULL);
 	}
 	else
 	{
-		s = malloc(n * sizeof(s1) + n);
-		if (s == NULL)
+		for (i = 0; i < size1; i++)
+			str[i] = s1[i];
+		for (j = 0; j < n; j++)
 		{
-			return (NULL);
+			str[i] = s2[j];
+			i++;
 		}
-		else
-		{
-			for (i = 0; s1[i] != '\0'; i++)
-			{
-				ch[i] = s1[i];
-			}
-			for (j = 0; j < n; j++)
-			{
-				ch[i] = s2[j];
-				i++;
-			}
-			return (ch);
-		}
+		return (str);
 	}
+}
+
+/**
+ * size - Return the size of a string
+ *
+ * @str: string
+ *
+ * Return: integer size of string
+ */
+int size(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
 }
