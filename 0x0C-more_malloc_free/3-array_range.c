@@ -8,7 +8,7 @@
  *
  * Return: pointer or null
  */
-void *array_range(int min, int max)
+int *array_range(int min, int max)
 {
 	int *ptr;
 	int i, size;
