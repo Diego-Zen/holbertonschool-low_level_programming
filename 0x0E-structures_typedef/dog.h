@@ -1,5 +1,17 @@
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
-#define SIZE 1024
-int _putchar(char c);
+#ifndef DOG_H
+#define DOG_H
+/**
+ * struct dog - a dog
+ *
+ *
+ *
+ *
+ */
+struct dog
+{
+	char *name;
+	float age;
+	char *owner
+}
+
 #endif
