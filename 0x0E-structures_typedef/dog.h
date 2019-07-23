@@ -3,15 +3,15 @@
 /**
  * struct dog - a dog
  *
- *
- *
- *
+ * @name: char name
+ * @age: float age
+ * @owner: char owner
  */
 struct dog
 {
 	char *name;
 	float age;
-	char *owner
-}
+	char *owner;
+};
 
 #endif
