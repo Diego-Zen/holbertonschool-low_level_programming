@@ -1,20 +1,20 @@
-#include "dog.h"
+B#include "dog.h"
 #include <stdlib.h>
 /**
- * init_dog - initialize a variable of type struct dog
+ * *new_dog - creates a new dog
  *
- * @d: dog struct
  * @name: char name
  * @age: float age
  * @owner: char owner
  *
+ * Return: a dog
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (d != NULL)
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
+	struct dog_t *my_dog;
+
+	my_dog->name = name;
+	my_dog->age = age;
+	my_dog->owner = owner;
+	return (my_dog);
 }
