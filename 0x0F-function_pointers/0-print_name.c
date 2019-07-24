@@ -1,20 +1,13 @@
-#include "dog.h"
+#include "function_pointers.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * print_dog - prints a struct dog
+ * print_name - prints a name
  *
- * @d: dog struct
+ * @name: string
+ * @f: function
  *
  */
-void print_dog(struct dog *d)
+void print_name(char *name, void (*f)(char *))
 {
-	if (d != NULL)
-	{
-		printf("Name: ");
-		d->name == NULL ? printf("(nil)\n") : printf("%s\n", d->name);
-		printf("Age: %f\n", d->age);
-		printf("Owner: ");
-		d->owner == NULL ? printf("(nil)\n") : printf("%s\n", d->owner);
-	}
+	f(name);
 }
