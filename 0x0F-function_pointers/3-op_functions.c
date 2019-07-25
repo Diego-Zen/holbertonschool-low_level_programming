@@ -1,31 +1,61 @@
-#include "function_pointers.h"
+#include "calc.h"
 /**
- * int_index - searches for an integer
+ * op_add - sum parameter numbers
  *
- * @array: array of integers
- * @size: numbers of elements of the array
- * @cmp: function
+ * @a: integer
+ * @b: integer
  *
- * Return: integer value
+ * Return: result sum operation
  */
-int int_index(int *array, int size, int (*cmp)(int))
+int op_add(int a, int b)
 {
-	if (array != NULL && cmp != NULL)
-	{
-		if (size <= 0)
-		{
-			return (-1);
-		}
-		else
-		{
-			int i;
-
-			for (i = 0; i < size; i++)
-			{
-				if ((*cmp)(array[i]))
-					return (i);
-			}
-		}
-	}
-	return (-1);
+        return (a + b);
+}
+/**
+ * op_sub - substract parameter numbers
+ *
+ * @a: integer
+ * @b: integer
+ *
+ * Return: result substract operation
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - multiply parameter numbers
+ *
+ * @a: integer
+ * @b: integer
+ *
+ * Return: result multiply operation
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - divide parameter numbers
+ *
+ * @a: integer
+ * @b: integer
+ *
+ * Return: result divide operation
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+/**
+ * op_mod - reminder divide parameter numbers
+ *
+ * @a: integer
+ * @b: integer
+ *
+ * Return: result mod operation
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
