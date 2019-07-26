@@ -1,31 +1,28 @@
-#include "function_pointers.h"
+#include "3-calc.h"
 /**
- * int_index - searches for an integer
+ * main - entry point
  *
- * @array: array of integers
- * @size: numbers of elements of the array
- * @cmp: function
+ * @argc: integer count arguments
+ * @argv: string vector arguments
  *
- * Return: integer value
+ * Return: Success or Error
  */
-int int_index(int *array, int size, int (*cmp)(int))
+int main(int argc, char *argv[])
 {
-	if (array != NULL && cmp != NULL)
+	if (argc > 3)
 	{
-		if (size <= 0)
-		{
-			return (-1);
-		}
-		else
-		{
-			int i;
+		int a = atoi(argv[1]);
+		int b = atoi(argv[4]);
+		int (*ptr)(int a, int b);
 
-			for (i = 0; i < size; i++)
-			{
-				if ((*cmp)(array[i]))
-					return (i);
-			}
+		ptr = get_op_func(argv[2]);
+
+		if (ptr != NULL)
+		{
+			printf("%d\n", ptr(a, b));
+			return (0);
 		}
 	}
-	return (-1);
+	printf("Error\n");
+	return (1);
 }
