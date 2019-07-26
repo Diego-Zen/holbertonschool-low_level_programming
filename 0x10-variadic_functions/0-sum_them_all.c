@@ -1,14 +1,29 @@
-#include "function_pointers.h"
-#include <stdlib.h>
+#include "variadic_functions.h"
 /**
- * print_name - prints a name
+ * sum_them_all - sum all the parameters
  *
- * @name: string
- * @f: function
+ * @n: number of arguments
  *
+ * Return: Integer sum of arguments or O if fail
  */
-void print_name(char *name, void (*f)(char *))
+int sum_them_all(const unsigned int n, ...)
 {
-	if (name != NULL && f != NULL)
-		f(name);
+	if (n == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		va_list args;
+		unsigned int sum = 0;
+		unsigned int i;
+
+		va_start(args, n);
+		for (i = 0; i < n; i++)
+		{
+			sum = sum + va_arg(args, int);
+		}
+		va_end(args);
+		return (sum);
+	}
 }
