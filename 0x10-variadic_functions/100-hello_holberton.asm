@@ -1,16 +1,13 @@
-section .data				;data section for declaring constants
-	msg db "Hello, Holberton",0x0a,0	;msg constant
-
-section .text				;text section is for code
-	global _start			;tells the kernel where to start
-
-_start:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, msg
-	mov rdx, 16
-	syscall
-
-	mov rax, 60
-	mov rdi, 0
-	syscall
+	segment .data
+msg: 	db 	"Hello, Holberton",0x0a
+len:	equ	$-msg
+	segment .text
+	global main
+	extern write, exit
+main:
+	mov 	edx, len
+	mov 	rsi, msg
+	mov 	edi, 1
+	call	write
+	xor 	edi, edi
+	call 	exit
