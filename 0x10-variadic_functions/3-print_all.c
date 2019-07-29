@@ -11,6 +11,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i;
 	unsigned int j;
+	char * separator = "";
 
 	optype_t list[] = {
 		{"c", print_char},
@@ -29,8 +30,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == list[j].c[0])
 			{
+				printf("%s", separator);
 				list[j].f(args);
-				printf(", ");
+				separator = ", ";
 			}
 			j++;
 		}
@@ -82,7 +84,6 @@ void print_string(va_list args)
 
 	s = va_arg(args, char *);
 	if (s == NULL)
-		printf("(nil)");
-	else
-		printf("%s", s);
+		s = "(nil)";
+	printf("%s", s);
 }
