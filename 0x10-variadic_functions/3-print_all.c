@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i;
 	unsigned int j;
-	char * separator = "";
+	char *separator = "";
 
 	optype_t list[] = {
 		{"c", print_char},

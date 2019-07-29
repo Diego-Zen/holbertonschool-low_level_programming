@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * struct optype
+ * struct optype - struct for operation type
  *
  * @c: char types
  * @f: pointer to function
@@ -13,7 +13,7 @@ typedef struct optype
 {
 	char *c;
 	void (*f)(va_list);
-}optype_t;
+} optype_t;
 int sum_them_all(const unsigned int n, ...);
 int _putchar(char c);
 void print_numbers(const char *separator, const unsigned int n, ...);
