@@ -1,26 +1,24 @@
-#ifndef VARIADIC_FUNCTIONS_H
-#define VARIADIC_FUNCTIONS_H
+#ifndef LISTS_H
+#define LISTS_H
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- * struct optype - struct for operation type
+ * struct list_s - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
  *
- * @c: char types
- * @f: pointer to function
- *
+ * Description: singly linked list node structure
+ * for Holberton project
  */
-typedef struct optype
+typedef struct list_s
 {
-	char *c;
-	void (*f)(va_list);
-} optype_t;
-int sum_them_all(const unsigned int n, ...);
+	char *str;
+	unsigned int len;
+	struct list_s *next;
+} list_t;
+
 int _putchar(char c);
-void print_numbers(const char *separator, const unsigned int n, ...);
-void print_strings(const char *separator, const unsigned int n, ...);
-void print_all(const char * const format, ...);
-void print_char(va_list);
-void print_integer(va_list);
-void print_float(va_list);
-void print_string(va_list);
+void print_numbers(const char *separator);
+size_t print_list(const list_t *h);
 #endif

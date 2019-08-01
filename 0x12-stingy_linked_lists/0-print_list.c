@@ -1,89 +1,24 @@
-#include "variadic_functions.h"
+#include "lists.h"
 #include <stdio.h>
 /**
- * print_all - prints anything
+ * print_list - return the number of nodes
  *
- * @format: string to be printed
+ * @h: pointer to the start of the list
  *
+ * Return: number of nodes
  */
-void print_all(const char * const format, ...)
+size_t print_list(const list_t *h)
 {
-	va_list args;
-	unsigned int i;
-	unsigned int j;
-	char *separator = "";
+	const list_t *current = h;
+	size_t i;
 
-	optype_t list[] = {
-		{"c", print_char},
-		{"i", print_integer},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
-
-	va_start(args, format);
-	i = 0;
-	while (format != NULL && format[i] != '\0')
+	for (i = 0; current != NULL; i++)
 	{
-		j = 0;
-		while (list[j].c != NULL)
-		{
-			if (format[i] == list[j].c[0])
-			{
-				printf("%s", separator);
-				list[j].f(args);
-				separator = ", ";
-			}
-			j++;
-		}
-		i++;
+		if (current->str == NULL)
+			printf("[%d] (nil)\n", current->len);
+		else
+			printf("[%d] %s\n", current->len, current->str);
+		current = current->next;
 	}
-	printf("\n");
-	va_end(args);
-}
-
-/**
- * print_char - print character
- *
- * @args: char
- *
- */
-void print_char(va_list args)
-{
-	printf("%c", va_arg(args, int));
-}
-/**
- * print_integer - print integer
- *
- * @args: integer
- *
- */
-void print_integer(va_list args)
-{
-	printf("%d", va_arg(args, int));
-}
-/**
- * print_float - print float
- *
- * @args: float
- *
- */
-void print_float(va_list args)
-{
-	printf("%f", va_arg(args, double));
-}
-/**
- * print_string - print a string
- *
- * @args: string
- *
- */
-void print_string(va_list args)
-{
-	char *s;
-
-	s = va_arg(args, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s", s);
+	return (i);
 }
