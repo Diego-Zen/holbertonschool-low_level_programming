@@ -12,22 +12,18 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
-	char *copy;
-	unsigned int i;
-
-	if (str == NULL)
-		copy = "(nil)";
-	else
-		copy = strdup(str);
 
 	new_node = malloc(sizeof(list_t));
 
-	if (new_node == NULL)
+	if (new_node == NULL || str == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
+		char *copy = strdup(str);
+		unsigned int i;
+
 		new_node->str = copy;
 		for (i = 0; copy[i] != '\0'; i++)
 			;
