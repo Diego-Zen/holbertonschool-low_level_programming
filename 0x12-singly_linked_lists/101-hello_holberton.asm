@@ -1,13 +1,15 @@
+	extern	printf
 	segment .data
-msg: 	db 	"Hello, Holberton",0x0a
-len:	equ	$-msg
+msg: 	db 	"Hello, Holberton", 0
+fmt:	db	"%s", 10, 0
 	segment .text
 	global main
-	extern write, exit
 main:
-	mov 	edx, len
+	push	rbp
+	mov 	rdi, fmt
 	mov 	rsi, msg
-	mov 	edi, 1
-	call	write
-	xor 	edi, edi
-	call 	exit
+	mov 	rax, 0
+	call	printf
+	pop	rbp
+	mov	rax, 0
+	ret
