@@ -2,3 +2,5 @@
 *~
 # Ignore compiled files
 *.[oa]
+# Ignore executables
+[abcdefghijk]
