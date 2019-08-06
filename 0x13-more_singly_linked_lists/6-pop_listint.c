@@ -13,6 +13,9 @@ int pop_listint(listint_t **head)
 	listint_t *old;
 	int val;
 
+	if (head == NULL)
+		return (1);
+
 	old = *current;
 	*current = (*current)->next;
 	val = old->n;
