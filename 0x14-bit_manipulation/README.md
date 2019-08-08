@@ -34,4 +34,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Diego monroy** - [@Diego-Zen](https://github.com/Diego-Zen)
+* **Diego Monroy** - [@Diego-Zen](https://github.com/Diego-Zen)
