@@ -14,6 +14,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, len = 0;
+	char *copy;
 
 	if (filename == NULL)
 		return (-1);
@@ -21,11 +22,11 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 	if (fd == -1)
 		return (0);
-
-	while (*text_content != 0)
+	copy = text_content;
+	while (*copy != '\0')
 	{
 		len++;
-		text_content++;
+		copy++;
 	}
 
 	if (write(fd, text_content, len) != len)
