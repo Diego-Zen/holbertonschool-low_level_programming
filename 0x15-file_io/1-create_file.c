@@ -23,14 +23,17 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (0);
 	copy = text_content;
-	while (*copy != '\0')
+	if (text_content != NULL)
 	{
-		len++;
-		copy++;
+		copy = text_content;
+		while (*copy != '\0')
+		{
+			len++;
+			copu++;
+		}
+		if (write(fd, text_content, len) != len)
+			return (-1);
 	}
-
-	if (write(fd, text_content, len) != len)
-		return (-1);
 
 	close(fd);
 	return (1);
