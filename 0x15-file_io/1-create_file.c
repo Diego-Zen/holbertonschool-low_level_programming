@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 		while (*copy != '\0')
 		{
 			len++;
-			copu++;
+			copy++;
 		}
 		if (write(fd, text_content, len) != len)
 			return (-1);
