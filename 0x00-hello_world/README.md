@@ -19,5 +19,5 @@ This project is all about learning the basics of C programming language
 * C program compilation process
 * Hash-bang
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

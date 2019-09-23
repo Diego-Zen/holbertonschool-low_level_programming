@@ -14,5 +14,5 @@ This project is about recursion in C
 * Strings
 * Recursion
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

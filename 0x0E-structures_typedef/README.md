@@ -7,5 +7,5 @@ This project is about understanding the structures in C
 * What are structures
 * How to use them
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

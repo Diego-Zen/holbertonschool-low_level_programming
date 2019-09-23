@@ -23,5 +23,5 @@ and using prototypes
 * Prototype
 * How to use nested loops
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

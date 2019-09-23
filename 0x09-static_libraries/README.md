@@ -10,5 +10,5 @@ This project is about libraries in C
 * difference between dynamic and static library
 * Static libraies
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

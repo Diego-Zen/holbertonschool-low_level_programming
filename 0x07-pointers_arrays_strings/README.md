@@ -14,5 +14,5 @@ This project is about arrays, pointers, strings in C
 * Pointers
 * Strings
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

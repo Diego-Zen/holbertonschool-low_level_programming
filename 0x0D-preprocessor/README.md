@@ -8,5 +8,5 @@ This project is about understanding the compilation process
 * What are the most common predefined macros
 * How to include guard your header files
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

@@ -9,5 +9,5 @@ AWESOME!
 ## Date
 2019
 
-## Maintainer
-@Diego-Zen
+## Author
+@diegozencode

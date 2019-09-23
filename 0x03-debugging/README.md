@@ -11,5 +11,5 @@ This project is about debugging, how to ddebug a program and how to use the Rubb
 ## Knowledge
 Debugging is the process of finding and fixing errors in software that prevents it from running correctly.
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

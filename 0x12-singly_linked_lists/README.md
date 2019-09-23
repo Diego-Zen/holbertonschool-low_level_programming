@@ -8,4 +8,4 @@ This project is about using linked lists for different tasks
 * How to build and use linked lists
 
 ## Author | Institution
-@Diego-Zen - @Holberton School
+@diegozencode - @Holberton School

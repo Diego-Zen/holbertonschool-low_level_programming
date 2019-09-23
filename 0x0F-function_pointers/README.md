@@ -7,5 +7,5 @@ This project is about function pointers
 * What are function pointers and how to use them
 * What does a function pointer
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

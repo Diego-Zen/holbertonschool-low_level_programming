@@ -7,5 +7,5 @@ This project is about malloc, free and exit
 * How to use the exit function
 * What are the functions calloc nad realloc
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

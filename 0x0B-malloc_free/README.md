@@ -9,5 +9,5 @@ This project is about malloc and free
 * Why and when use malloc
 * How to use valgrind
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

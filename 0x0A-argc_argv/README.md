@@ -9,5 +9,5 @@ This project is about arguments, argc and argv
 * What does argc and argv mean
 * How to compile with unused variables
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School

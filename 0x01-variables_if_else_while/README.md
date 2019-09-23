@@ -23,5 +23,5 @@ variables, conditional statements and loops
 * Relational operators (>, <, >=, <=, ==, !=)
 * How to use if, if else, for, while and do while
 
-## Maintainer | School
-@Diego-Zen - @Holberton School
+## Author | School
+@diegozencode - @Holberton School
