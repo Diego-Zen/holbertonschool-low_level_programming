@@ -4,44 +4,27 @@
 
 /**
  * main - entry point
- *
  * all possible combinations of two two digit numbers
- *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n;
-	int x;
-	int y;
-	int z;
+	int x, y;
 
-	for (n = '0'; n <= '9'; n++)
+	for (x = 0; x <= 99; x++)
 	{
-		x = n;
-		while (x <= '8')
+		for (y = x + 1; y <= 99; y++)
 		{
-			y = x;
-			while (y <= '9')
+			putchar(x / 10 + '0');
+			putchar(x % 10 + '0');
+			putchar(' ');
+			putchar(y / 10 + '0');
+			putchar(y % 10 + '0');
+			if (x != 98)
 			{
-				z = x + 1;
-				while (z <= '9')
-				{
-					putchar(n);
-					putchar(x);
-					putchar(' ');
-					putchar(y);
-					putchar(z);
-					if (n != '9' || x != '8' || y != '9' || z != '9')
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					z++;
-				}
-				y++;
+				putchar(',');
+				putchar(' ');
 			}
-			x++;
 		}
 	}
 	putchar('\n');
