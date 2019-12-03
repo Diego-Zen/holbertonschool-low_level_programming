@@ -89,5 +89,6 @@ What you should learn from this project:
 
 ---
 
-## Author
+## Authors
+* **Sergio Rueda** - [sechchr22](https://github.com/sechchr22)
 * **Diego Monroy** - [diegozencode](https://github.com/diegozencode)
