@@ -20,9 +20,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	else
 	{
 		count_left = binary_tree_leaves(tree->left);
-		printf("Count left: %d\n", (int)count_left);
 		count_right = binary_tree_leaves(tree->right);
-		printf("Count right: %d\n", (int)count_right);
 	}
 	return (count_left + count_right);
 }
