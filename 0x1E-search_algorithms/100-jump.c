@@ -10,12 +10,14 @@
  */
 int jump_search(int *array, size_t size, int value)
 {
-	int jump = sqrt(size);
 	int next = 0;
 	int prev = 0;
+	int jump = 0;
 
-	if (array == NULL || size == 0)
+	if (array == NULL || size <= 0)
 		return (-1);
+
+	jump = sqrt(size);
 
 	for (; array[next] < value && next < (int)size; next = next + jump)
 	{
