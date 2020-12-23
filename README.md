@@ -1,6 +1,6 @@
 # Low level programming
 ![Holberton logo](https://www.holbertonschool.com/holberton-logo.png)
-> 
+> Foundations
 ## Description:bulb:
 Learning C programming language the right way.
 
